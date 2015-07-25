@@ -35,6 +35,11 @@ def roost():
     return render_template('roost.html')
 
 
+@app.route('/roost.html')
+def roosthtml():
+    return render_template('roost.html')
+
+
 @app.route('/notify')
 def notify():
     return render_template('notify.html', onemap_apikey=app.config['ONEMAP_APIKEY'])
