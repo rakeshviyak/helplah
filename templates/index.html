@@ -213,6 +213,7 @@
                     window.alert(settings)
                     $.ajax(settings).done(function (response) {
                       console.log(response);
+                      window.alert(response);
                     });
                     window.location=document.getElementById("current_loc_id").getAttribute('href');
 
