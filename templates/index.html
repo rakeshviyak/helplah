@@ -46,6 +46,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="static\css\material.min.css">
     <link rel="stylesheet" href="static\css\styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <style>
     #view-source {
       position: fixed;
@@ -167,14 +168,14 @@
               </form>
               <!-- Non dolore <em>  </em>lit adipisicing ea reprehenderit consectetur culpa. -->
               </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a href="/find" id="current_loc_id" class="mdl-button mdl-js-button mdl-js-ripple-effect">Find a Ninja</a>
+              <div class="mdl-card__actions mdl-card--border" href="/find" id="current_loc_id">
+                <a onclick="getLocation()" class="mdl-button mdl-js-button mdl-js-ripple-effect">Find a Ninja</a>
               </div>
             </div>
             <div class="demo-separator mdl-cell--1-col"></div>
             <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop" style="min-height: 0">
               <div class="mdl-card__actions mdl-card--border">
-                <a onclick="getLocation()" id="current_loc" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--blue-grey-50">AMK, ITE Central</a>
+                <a id="current_loc" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--blue-grey-50">AMK, ITE Central</a>
                 <div class="mdl-layout-spacer"></div>
                 <i class="material-icons">location_on</i>
 
@@ -192,7 +193,31 @@
                 function showPosition(position) {
                     // x.innerHTML = "Latitude: " + position.coords.latitude + 
                     // "<br>Longitude: " + position.coords.longitude;  
-                    y.setAttribute("href","/find?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&when=Now&type="+document.getElementById("sampleType").value)
+                    query_parms="?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&when=Now&type="+document.getElementById("sampleType").value;
+                    window.alert(position.coords);
+                    y.setAttribute("href","/find"+query_parms)
+                    send_url_data="{\"alert\":\"Help needed\", \"url\": \"https://helplah.herokuapp.com/notify"+query_parms+"\"}";
+                    var settings = {
+                      "async": true,
+                      "crossDomain": true,
+                      "url": "https://api.goroost.com/api/push",
+                      "method": "POST",
+                      "headers": {
+                        "content-type": "application/json",
+                        "authorization": "Basic enR2Y29nYTg2ZDhrbWk5ampxOHZwcmd6eGNhaGxrNTA6a3VkdXEyeTJtNmo1cjI0MGVidzd6Yjh1NnZ2NHAzM3U="
+                      },
+                      "processData": false,
+                      "data": send_url_data
+                    }
+                    console.log(settings.data)
+                    window.alert(settings)
+                    $.ajax(settings).done(function (response) {
+                      console.log(response);
+                    });
+                    window.location=document.getElementById("current_loc_id").getAttribute('href');
+
+
+
                 }
                 </script>
 
@@ -202,6 +227,11 @@
         </div>
       </main>
     </div>
+    <script>
+
+    function send_notification(){
+                  }
+    </script>
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
         <defs>
           <mask id="piemask" maskContentUnits="objectBoundingBox">
@@ -249,7 +279,13 @@
           </g>
         </defs>
       </svg>
-      <a href="/find" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background-color: #C10066">Emergency</a>
+      <a onclick=emergencyTask() id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background-color: #C10066">Emergency</a>
+      <script>
+        function emergencyTask(){
+          document.getElementById("sampleType").value="Emergency";
+          getLocation();
+        }
+      </script>
 
     <script src="static\js\material.min.js"></script>
   </body>
