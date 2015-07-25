@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
+import requests
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -18,6 +18,20 @@ def index():
 
 @app.route('/find')
 def find():
+    type = request.args.get('type')
+    when = request.args.get('when')
+    url = "https://api.goroost.com/api/push"
+
+    payload = "{\"alert\":\"Help needed\", \"url\":\"https://helplah.herokuapp.com/notify?when="+when+"&type="+type+"\"}"
+    headers = {
+        'content-type': "application/json",
+        'authorization': "Basic enR2Y29nYTg2ZDhrbWk5ampxOHZwcmd6eGNhaGxrNTA6a3VkdXEyeTJtNmo1cjI0MGVidzd6Yjh1NnZ2NHAzM3U="
+        # 'access-control-allow-origin': "*"
+        }
+
+    response = requests.request("POST", url, data=payload, headers=headers)
+
+    print(response.text)
     return render_template('find.html')
 
 
