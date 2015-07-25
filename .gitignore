@@ -117,8 +117,6 @@ pyvenv.cfg
 pip-selfcheck.json
 
 ### config file
-settings.cfg
-instance
+config_development.py
 
-### test db
-myapi/test.db
+instance
