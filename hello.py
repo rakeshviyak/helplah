@@ -1,5 +1,9 @@
 from flask import Flask, render_template
+
+
 app = Flask(__name__)
+app.config.from_object('config')
+app.config.from_pyfile('config_development.py', silent=True)
 
 
 @app.route('/login')
@@ -29,7 +33,7 @@ def matched():
 
 @app.route('/notify')
 def notify():
-    return render_template('notify.html')
+    return render_template('notify.html', onemap_apikey=app.config['ONEMAP_APIKEY'])
 
 
 if __name__ == '__main__':

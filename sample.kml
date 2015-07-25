@@ -1,0 +1,63 @@
+<kml xmlns:xmnls="http://earth.google.com/kml/2.2">
+  <Document>
+    <Folder>
+      onemapKML
+      <Placemark>
+        <name>Sample1</name>
+        <id>1</id>
+        <description>
+          <TEXTFORMAT LEADING="2">
+            <P ALIGN="LEFT">
+              <FONT FACE="Verdana" SIZE="10" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">Sample POint 1</FONT>
+            </P>
+          </TEXTFORMAT>
+        </description>
+        <Point>
+          <coordinates>12873.818766404203,36554.022305477934,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sample2</name>
+        <id>2</id>
+        <description>
+          <TEXTFORMAT LEADING="2">
+            <P ALIGN="LEFT">
+              <FONT FACE="Verdana" SIZE="10" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">Sample POint2</FONT>
+            </P>
+          </TEXTFORMAT>
+        </description>
+        <Point>
+          <coordinates>27282.234649902646,30572.809876386415,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sample4</name>
+        <id>4</id>
+        <description>
+          <TEXTFORMAT LEADING="2">
+            <P ALIGN="LEFT">
+              <FONT FACE="Verdana" SIZE="10" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">Sample Point4</FONT>
+            </P>
+          </TEXTFORMAT>
+        </description>
+        <Point>
+          <coordinates>25447.74138091613,45669.16073575478,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sample3</name>
+        <id>3</id>
+        <description>
+          <TEXTFORMAT LEADING="2">
+            <P ALIGN="LEFT">
+              <FONT FACE="Verdana" SIZE="10" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0">Sample POint3</FONT>
+            </P>
+          </TEXTFORMAT>
+        </description>
+        <Point>
+          <coordinates>36569.356824147006,36974.42701295402,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

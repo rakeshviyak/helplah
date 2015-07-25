@@ -59,7 +59,7 @@
     </style>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-  <script type='text/JavaScript' src='http://www.onemap.sg/API/JS?accessKEY=xkg8VRu6Ol+gMH+SUamkRIEB7fKzhwMvfMo/2U8UJcFhdvR4yN1GutmUIA3A6r3LDhot215OVVkZvNRzjl28TNUZgYFSswOi&v=3.10&type=full'></script>
+  <script type='text/JavaScript' src='http://www.onemap.sg/API/JS?accessKEY={{ onemap_apikey }}&v=3.10&type=full'></script>
     <script language="JavaScript" type="text/JavaScript">
 
         var QueryString = function () {
@@ -85,19 +85,34 @@
             return query_string;
         }();
        
-        //add map with defined center location and zoom level
-        var centerPoint = "28968.103,33560.969"
-        var levelNumber = 8;
-        var OneMap = new GetOneMap('divMain', 'SM', { level: levelNumber, center: centerPoint });
+        // //add map with defined center location and zoom level
+        // var centerPoint = "28968.103,33560.969"
+        // var levelNumber = 8;
+        // var OneMap = new GetOneMap('divMain', 'SM', { level: levelNumber, center: centerPoint });
 
-        function GetCurrentLevel() {
-            alert("Current Level:" + OneMap.map.getLevel())
-        }
+        // function GetCurrentLevel() {
+        //     alert("Current Level:" + OneMap.map.getLevel())
+        // }
+
+
+         var OneMap = new GetOneMap('divMain', 'sm');
+
+            function Overlay() {
+                var kmlPath = "/static/file.kml" //document.getElementById('sample.kml').value;
+                OneMap.overlayKML(kmlPath);
+                // OneMap.showLocation(12873.818766404203, 36554.022305477934);
+                // OneMap.showLocation(27282.234649902646, 30572.809876386415);
+
+            }
+
+            function clearGraphicsFromMap() {
+                OneMap.clearGraphics()
+            }
 
     </script>
 
   </head>
-  <body>
+  <body onload="Overlay()">
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--white mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
