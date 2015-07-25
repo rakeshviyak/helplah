@@ -196,7 +196,7 @@
                     query_parms="?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&when=Now&type="+document.getElementById("sampleType").value;
                     window.alert(position.coords);
                     y.setAttribute("href","/find"+query_parms)
-                    send_url_data="{\"alert\":\"Help needed\", \"url\": \"https://helplah.herokuapp.com/notify"+query_parms+"\"}";
+                    send_url_data="\"{\"alert\":\"Help needed\", \"url\": \"https://helplah.herokuapp.com/notify"+query_parms+"\"}\"";
                     var settings = {
                       "async": true,
                       "crossDomain": true,
