@@ -200,12 +200,29 @@ _:-ms-input-placeholder, :root .demo-graph {
 .demo-cards h3 {
   font-size: 1em;
 }
+/*change*/
+/*took out background-image from the class below*/
 .demo-updates .mdl-card__title {
   min-height: 200px;
-  background-image: url('/static/images/dog.png');
   background-position: 90% 100%;
   background-repeat: no-repeat;
 }
+/*added the classes below*/
+.index{
+background-image: url('/static/images/new.png')
+}
+.find{
+  background-image: url('/static/images/ninja.png')
+}
+.leader{
+  background-image: url('/static/images/leader.png')
+}
+.leader-text {color: #6f7675 !important}
+.matched{
+  background-image: url('/static/images/matched.png')
+}
+/*end of change*/
+
 .demo-cards .mdl-card__actions a {
   color: #00BCD4;
   text-decoration: none;

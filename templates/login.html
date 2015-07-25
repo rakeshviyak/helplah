@@ -44,8 +44,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="static\css\material.min.css">
-    <link rel="stylesheet" href="static\css\styles.css">
+    <link rel="stylesheet" href="static/css/material.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
  
 
 
@@ -88,22 +88,24 @@ body {
   -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
 }
 
+/*change - background & color*/
 .container {
-  background: #00C993;
+  background: #fff;
   position: absolute;
   display: block;
   width: 100%;
   height: 2050px;
-  color: white;
+  color: #fd7174;
   text-align: center;
   min-width: 24px;
 }
 
+/*change - color*/
 .section {
   position: absolute;
   display: block;
   width: 100%;
-  color: white;
+  color: #fd7174;
   text-align: left;
 }
 
@@ -199,23 +201,26 @@ band2 h2 {
   min-width: 100px;
 }
 
+/*change - background color*/
 #mc_embed_signup {
   text-align: right;
-  background-color: #00C993;
+  background-color: #fff;
 }
 
+/*change - borderstyle & outline*/
 #mce-EMAIL {
   text-align: right;
   width: auto;
   height: 30px;
   margin-bottom: 20px;
   padding-right: 1em;
-  border-style: none;
-  outline: none;
+/*  border-style: none;*/
+  outline: black;
 }
 
+/*change - outline*/
 #mce-EMAIL:focus {
-  outline: none;
+  outline: black;
 }
 
 #mc-embedded-subscribe {
@@ -275,8 +280,9 @@ a {
   background: #BCB1A5;
 }
 
+/*change - color*/
 a.arrow {
-  color: white;
+  color: #fd7174;
   text-align: center;
   font-size: 3em;
   text-decoration: none;
@@ -292,8 +298,9 @@ a.arrow {
   /* Firefox 16+, Opera 12.50+ */
 }
 
+/*change - color*/
 a.arrow:hover {
-  color: #FFC52F;
+  color: #fd7174;
 }
 
 @media only screen and (min-width: 767px) {
@@ -596,7 +603,8 @@ $(".icon-bookmark").click(function(){
   </head>
   <body style="margin:0px">
 <div class="container" id="skrollr-body" data-0="background-color:rgb(0,201,147);" data-400="background-color:rgb(74,173,255);" data-1000="background-color:rgb(74,173,255);" data-1300="background-color:rgb(0,201,147);">
-  <h1><i class="icon-circle-blank"></i></h1>
+  <!-- change - add icon image -->
+  <h1><img src="static/images/icon.png"></h1>
   <h2>Helplah</h2>
   <p> Live awesome everyday </p>
 
@@ -630,7 +638,7 @@ $(".icon-bookmark").click(function(){
     <!--/ explanation-->
   </div>
   <!--/ sect1-->
-
+  
   <div class="section" id="sect2">
     <div class="anchor" id="anchor2"></div>
     <div id="hiddenIcon">
@@ -665,7 +673,7 @@ $(".icon-bookmark").click(function(){
 
           <input type="email" value="" id="mce-EMAIL" placeholder="90914475" onfocus="this.placeholder = ''" onblur="this.placeholder = '90914475'">
           <div>
-                <a href="/" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background-color: #C10066">I WANT IT</a>
+                <a href="/mdl/templates/dashboard/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="background-color: #C10066">I WANT IT</a>
 
           </div>
         </form>
