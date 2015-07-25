@@ -30,6 +30,10 @@ def leadership():
 def matched():
     return render_template('matched.html')
 
+@app.route('/roost')
+def roost():
+    return render_template('roost.html')
+
 
 @app.route('/notify')
 def notify():
