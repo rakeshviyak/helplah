@@ -42,7 +42,8 @@ def leadership():
 
 @app.route('/matched')
 def matched():
-    return render_template('matched.html')
+    return render_template('matched.html', onemap_apikey=app.config['ONEMAP_APIKEY'])
+
 
 @app.route('/roost')
 def roost():

@@ -25,7 +25,7 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <meta name="theme-color" content="#C10066"><link rel="icon" sizes="192x192" href="/static/images/logo.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -59,7 +59,7 @@
     </style>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-  <script type='text/JavaScript' src='http://www.onemap.sg/API/JS?accessKEY=xkg8VRu6Ol+gMH+SUamkRIEB7fKzhwMvfMo/2U8UJcFhdvR4yN1GutmUIA3A6r3LDhot215OVVkZvNRzjl28TNUZgYFSswOi&v=3.10&type=full'></script>
+  <script type='text/JavaScript' src='https://www.onemap.sg/API/JS/?accessKEY={{ onemap_apikey }}&v=3.10&type=full&reqType=HTTPS'></script>
     <script language="JavaScript" type="text/JavaScript">
 
         var QueryString = function () {
@@ -140,11 +140,11 @@
           </div>
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Get Help</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Emergency!!</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Leadership</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Contact</a>
+          <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Get Help</a>
+          <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Emergency!!</a>
+          <a class="mdl-navigation__link" href="/leadership"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Leadership</a>
+          <a class="mdl-navigation__link" href="/login"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Contact</a>
           <!-- <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
