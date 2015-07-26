@@ -256,3 +256,19 @@ background-image: url('/static/images/new.png')
       -ms-flex-align: center;
           align-items: center;
 }
+
+
+#pic {
+  background-image: url(/static/images/captureplot.png);
+  background-repeat: no-repeat;
+  min-width: 200px;
+  min-height:150px;
+  background-position: center;
+}
+#cb {
+/*  background-image: url(images/cb.png);*/
+  background-repeat: no-repeat;
+  max-width: 100px;
+  max-height:150px;
+  background-position: center !important;
+}
